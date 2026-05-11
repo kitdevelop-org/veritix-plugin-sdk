@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <!-- Incluir Common.targets para que sea consumido automáticamente por los plugins -->
-    <None Include="../Veritix.Plugin.Common.targets" Pack="true" PackagePath="build\Veritix.Plugin.SDK.targets" />
+    <None Include="Veritix.Plugin.Common.targets" Pack="true" PackagePath="build\Veritix.Plugin.SDK.targets" />
   </ItemGroup>
 
 </Project>
