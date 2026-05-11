@@ -20,9 +20,6 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '10.0.x'
-        source-url: https://nuget.pkg.github.com/kitdevelop-org/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Install dependencies
       run: dotnet restore
@@ -34,4 +31,6 @@ jobs:
       run: dotnet pack --configuration Release --no-build -o .
 
     - name: Publish to GitHub Packages
-      run: dotnet nuget push *.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github" --skip-duplicate
+      run: |
+        dotnet nuget add source --username yonsina94 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/kitdevelop-org/index.json"
+        dotnet nuget push *.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github" --skip-duplicate
