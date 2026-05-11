@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Veritix.Plugin.SDK</id>
+    <version>1.0.0</version>
+    <authors>KitDevelop S.R.L.</authors>
+    <description>SDK oficial para el desarrollo de plugins para Veritix ERP</description>
+    <tags>veritix erp plugin sdk kitdevelop</tags>
+    <repository type="git" commit="97492e17912c5a09c2c94f0cc59b6cbb5d6d46a8" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="10.0.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="10.0.7" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net10.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/bin/Release/net10.0/Veritix.Plugin.SDK.dll" target="lib/net10.0/Veritix.Plugin.SDK.dll" />
+  </files>
+</package>

@@ -1,0 +1,13 @@
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/bin/Release/net10.0/Veritix.Plugin.SDK.deps.json
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/bin/Release/net10.0/Veritix.Plugin.SDK.dll
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/bin/Release/net10.0/Veritix.Plugin.SDK.pdb
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.csproj.AssemblyReference.cache
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.GeneratedMSBuildEditorConfig.editorconfig
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.AssemblyInfoInputs.cache
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.AssemblyInfo.cs
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.csproj.CoreCompileInputs.cache
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.sourcelink.json
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.dll
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/refint/Veritix.Plugin.SDK.dll
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/Veritix.Plugin.SDK.pdb
+/home/yansi/Projects/dotnet/veritix/src/Veritix.Plugin.SDK/obj/Release/net10.0/ref/Veritix.Plugin.SDK.dll

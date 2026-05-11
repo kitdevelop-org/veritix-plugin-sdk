@@ -1,0 +1,51 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- 
+    Veritix Plugin Common Targets 
+    Este archivo estandariza el empaquetado .vtx para todos los plugins.
+  -->
+
+  <PropertyGroup>
+    <!-- Define el nombre del archivo de salida .vtx -->
+    <VtxOutput>$(OutputPath)$(AssemblyName).vtx</VtxOutput>
+    <VtxStaging>$(OutputPath)vtx_staging\</VtxStaging>
+  </PropertyGroup>
+
+  <!-- Target principal para generar el paquete .vtx -->
+  <Target Name="PackageVtx" AfterTargets="Publish">
+    <Message Importance="high" Text="📦 Generando paquete Veritix (.vtx) para $(AssemblyName)..." />
+    
+    <!-- Limpiar staging -->
+    <RemoveDir Directories="$(VtxStaging)" />
+    <MakeDir Directories="$(VtxStaging)" />
+
+    <!-- 1. Copiar binarios publicados (excluyendo el SDK si se desea, 
+         pero por simplicidad copiamos todo lo necesario para ejecución aislada) -->
+    <ItemGroup>
+      <PublishFiles Include="$(PublishDir)**\*" Exclude="$(PublishDir)Veritix.Plugin.SDK.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PublishFiles)" DestinationFolder="$(VtxStaging)" />
+
+    <!-- 2. Copiar manifiesto del plugin -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\plugin.json" DestinationFolder="$(VtxStaging)" Condition="Exists('$(MSBuildProjectDirectory)\plugin.json')" />
+
+    <!-- 3. Copiar recursos de localización (i18n) -->
+    <ItemGroup>
+      <I18nFiles Include="$(MSBuildProjectDirectory)\i18n\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(I18nFiles)" DestinationFiles="@(I18nFiles->'$(VtxStaging)i18n\%(RecursiveDir)%(Filename)%(Extension)')" Condition="'@(I18nFiles)' != ''" />
+
+    <!-- 4. Copiar assets de frontend (wwwroot) -->
+    <ItemGroup>
+      <FrontendFiles Include="$(MSBuildProjectDirectory)\wwwroot\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(FrontendFiles)" DestinationFiles="@(FrontendFiles->'$(VtxStaging)wwwroot\%(RecursiveDir)%(Filename)%(Extension)')" Condition="'@(FrontendFiles)' != ''" />
+
+    <!-- 5. Comprimir todo en el archivo .vtx -->
+    <ZipDirectory SourceDirectory="$(VtxStaging)" DestinationFile="$(VtxOutput)" Overwrite="true" />
+
+    <!-- Limpieza -->
+    <RemoveDir Directories="$(VtxStaging)" />
+    
+    <Message Importance="high" Text="✅ Paquete generado con éxito: $(VtxOutput)" />
+  </Target>
+</Project>
