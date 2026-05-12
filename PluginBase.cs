@@ -8,7 +8,7 @@ using Veritix.Plugin.SDK.Licensing;
 namespace Veritix.Plugin.SDK;
 
 /// <summary>
-/// Clase base para plugins de Veritrix.
+/// Clase base para plugins de Veritix.
 /// Implementa comportamiento por defecto para que el desarrollador
 /// solo sobreescriba lo que necesita.
 /// </summary>

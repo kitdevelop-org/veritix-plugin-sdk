@@ -9,7 +9,7 @@
 
     <!-- NuGet metadata -->
     <PackageId>Veritix.Plugin.SDK</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>KitDevelop S.R.L.</Authors>
     <Company>KitDevelop S.R.L.</Company>
     <Description>SDK oficial para el desarrollo de plugins para Veritix ERP</Description>

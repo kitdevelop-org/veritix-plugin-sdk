@@ -2,7 +2,7 @@ namespace Veritix.Plugin.SDK.Licensing;
 
 /// <summary>
 /// El plugin implementa esto si requiere su propia licencia.
-/// Veritrix llama a ValidateAsync antes de habilitar el plugin.
+/// Veritix llama a ValidateAsync antes de habilitar el plugin.
 /// </summary>
 public interface IPluginLicenseValidator
 {
